@@ -19,7 +19,7 @@ export default async function Home() {
           <p className="text-xs uppercase tracking-[0.28em] text-accent">{SITE_FULL_NAME}</p>
           <h1 className="serif mt-6 max-w-3xl text-5xl font-semibold leading-[1.12] md:text-7xl">{SITE_TAGLINE}</h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
-            {SITE_NAME} finds important papers, explains them in plain language, and keeps every claim tied to the original
+          P.A.R.I. finds important papers, explains them in plain language, and keeps every claim tied to the original
             source. You read the idea. The DOI takes you to the evidence.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
@@ -45,7 +45,7 @@ export default async function Home() {
             </h2>
             <p className="mt-4 text-lg leading-8 text-muted">{featured.summary}</p>
             <Link href={`/research/${featured.slug}`} className="mt-5 inline-block text-sm underline underline-offset-4">
-              Read the PARI brief
+              Read the P.A.R.I. brief
             </Link>
           </div>
         ) : (
@@ -86,7 +86,7 @@ export default async function Home() {
       <section className="border-y border-rule">
         <div className="mx-auto grid max-w-page gap-10 px-5 py-16 md:grid-cols-2">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-muted">Why PARI</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-muted">Why P.A.R.I.</p>
             <h2 className="serif mt-2 text-3xl font-semibold">Fewer papers. Better understanding.</h2>
           </div>
           <ul className="space-y-6 text-[17px] leading-7 text-muted">
@@ -109,7 +109,7 @@ export default async function Home() {
       <section className="mx-auto max-w-page px-5 py-16">
         <p className="text-xs uppercase tracking-[0.2em] text-muted">Newsletter</p>
         <h2 className="serif mt-2 text-3xl font-semibold">The week’s research, once.</h2>
-        <p className="mt-3 max-w-xl text-muted">No daily drip. Sign up if you want PARI in your inbox when briefs are published.</p>
+        <p className="mt-3 max-w-xl text-muted">No daily drip. Sign up if you want P.A.R.I. in your inbox when briefs are published.</p>
         <div className="mt-6">
           <NewsletterForm />
         </div>
