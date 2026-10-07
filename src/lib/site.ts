@@ -1,4 +1,4 @@
-export const SITE_NAME = "PARI";
+export const SITE_NAME = "P.A.R.I.";
 export const SITE_FULL_NAME = "Pranav Academic & Research Initiative";
 export const SITE_TAGLINE = "Research, made understandable.";
 
