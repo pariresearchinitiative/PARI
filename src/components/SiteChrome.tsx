@@ -77,12 +77,13 @@ export function Header() {
 
           {!loading && userEmail ? (
             <div className="flex items-center gap-3">
-              <div
-                className="flex h-8 w-8 items-center justify-center rounded-full border border-rule bg-ink text-xs font-semibold text-paper"
-                title={userEmail}
-              >
-                {avatarLetter}
-              </div>
+             <Link
+  href="/profile"
+  className="flex h-8 w-8 items-center justify-center rounded-full border border-rule bg-ink text-xs font-semibold text-paper hover:opacity-80"
+  title="Profile"
+>
+  {avatarLetter}
+</Link>
 
               <span className="hidden max-w-[180px] truncate sm:inline">
                 {userEmail}
