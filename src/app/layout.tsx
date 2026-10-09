@@ -1,7 +1,11 @@
+
 import "./globals.css";
+
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+
 import { Footer, Header } from "@/components/SiteChrome";
+
 import {
   SITE_DESCRIPTION,
   SITE_FULL_NAME,
@@ -32,11 +36,7 @@ export const metadata: Metadata = {
     "student research",
   ],
 
-  authors: [
-    {
-      name: SITE_FULL_NAME,
-    },
-  ],
+  authors: [{ name: SITE_FULL_NAME }],
 
   openGraph: {
     title: `${SITE_NAME} — ${SITE_FULL_NAME}`,
@@ -66,6 +66,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="dkiZ_kSxTVvK3_saKTciJD4H8Z0SRwM_Ee5uXlP8Tag"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -73,11 +77,10 @@ export default function RootLayout({
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;7..60,700&display=swap"
           rel="stylesheet"
         />
       </head>
-
       <body className="min-h-screen">
         <Header />
         {children}
