@@ -20,16 +20,14 @@ export default function ForgotPasswordPage() {
     try {
       const supabase = createBrowserSupabase();
 
-      const callbackUrl = new URL(
-        "/auth/callback",
+      const resetUrl = new URL(
+        "/reset-password",
         window.location.origin
       );
 
-      callbackUrl.searchParams.set("next", "/reset-password");
-
       const { error: resetError } =
         await supabase.auth.resetPasswordForEmail(email.trim(), {
-          redirectTo: callbackUrl.toString(),
+          redirectTo: resetUrl.toString(),
         });
 
       if (resetError) {
@@ -37,7 +35,7 @@ export default function ForgotPasswordPage() {
       }
 
       setMessage(
-        "Agar is email ka account hai, toh password reset email bhej diya gaya hai. Apna inbox aur spam folder check karo."
+        "Agar is email ka account hai, toh reset email bhej diya gaya hai. Apna inbox aur spam folder check karo."
       );
     } catch (err) {
       setError(
@@ -61,8 +59,7 @@ export default function ForgotPasswordPage() {
       </h1>
 
       <p className="mt-3 text-muted">
-        Apna admin email enter karo. Hum password reset link bhejne
-        ki request karenge.
+        Apna admin email enter karo. Hum password reset link bhejenge.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-4">
@@ -79,17 +76,17 @@ export default function ForgotPasswordPage() {
           />
         </label>
 
-        {message ? (
+        {message && (
           <p role="status" className="text-sm">
             {message}
           </p>
-        ) : null}
+        )}
 
-        {error ? (
+        {error && (
           <p role="alert" className="text-sm text-accent">
             {error}
           </p>
-        ) : null}
+        )}
 
         <button
           type="submit"
